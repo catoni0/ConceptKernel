@@ -405,6 +405,10 @@ static int __init msm_restart_init(void)
 #endif
 
 
+#ifdef CONFIG_KEXEC_HARDBOOT
+	 kexec_hardboot_hook = msm_kexec_hardboot_hook;
+#endif
+
 	return 0;
 }
 early_initcall(msm_restart_init);
