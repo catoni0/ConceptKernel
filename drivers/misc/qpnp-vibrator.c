@@ -192,6 +192,12 @@ static void qpnp_vib_enable(struct timed_output_dev *dev, int value)
 	schedule_work(&vib->work);
 }
 
+// Tommy-Geenexus: Vib trigger func for sleep gestures
+void qpnp_vib_trigger(int trigger_time)
+{
+	qpnp_vib_enable(&vib_dev->timed_dev, trigger_time);
+}
+
 static void qpnp_vib_update(struct work_struct *work)
 {
 	struct qpnp_vib *vib = container_of(work, struct qpnp_vib,
