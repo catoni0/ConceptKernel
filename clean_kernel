@@ -1,0 +1,8 @@
+### GCC 4.9.x
+
+### clean
+CROSS_COMPILE=/home/dev/android/arm-eabi-4.9/bin/arm-eabi- make distclean
+
+### delete additional generated files
+rm ./arch/arm/boot/zImage-dtb
+rm ./arch/arm/mach-msm/smd_rpc_sym.c
