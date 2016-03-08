@@ -455,7 +455,7 @@ static void __exit sweep2sleep_exit(void)
 	input_free_device(sweep2sleep_pwrdev);
 }
 
-late_initcall(sweep2sleep_init);
+module_init(sweep2sleep_init);
 module_exit(sweep2sleep_exit);
 
 MODULE_AUTHOR(DRIVER_AUTHOR);
