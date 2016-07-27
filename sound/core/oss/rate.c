@@ -318,6 +318,10 @@ int snd_pcm_plugin_build_rate(struct snd_pcm_substream *plug,
 		return -ENXIO;
 	if (snd_BUG_ON(dst_format->format != SNDRV_PCM_FORMAT_S16))
 		return -ENXIO;
+	if (snd_BUG_ON(src_format->format != SNDRV_PCM_FORMAT_S24))
+		return -ENXIO;
+	if (snd_BUG_ON(dst_format->format != SNDRV_PCM_FORMAT_S24))
+		return -ENXIO;
 	if (snd_BUG_ON(src_format->rate == dst_format->rate))
 		return -ENXIO;
 
