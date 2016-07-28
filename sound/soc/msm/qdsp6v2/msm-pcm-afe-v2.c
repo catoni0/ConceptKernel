@@ -52,9 +52,11 @@ static struct snd_pcm_hardware msm_afe_hardware_playback = {
 				SNDRV_PCM_FMTBIT_S24_LE,
 	.rates =                (SNDRV_PCM_RATE_8000 |
 				SNDRV_PCM_RATE_16000 |
-				SNDRV_PCM_RATE_48000),
+				SNDRV_PCM_RATE_48000 |
+				SNDRV_PCM_RATE_96000 |
+				SNDRV_PCM_RATE_192000),
 	.rate_min =             8000,
-	.rate_max =             48000,
+	.rate_max =             192000,
 	.channels_min =         1,
 	.channels_max =         6,
 	.buffer_bytes_max =     MAX_PLAYBACK_PERIOD_SIZE *
