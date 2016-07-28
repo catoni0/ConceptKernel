@@ -44,6 +44,7 @@ struct snd_msm_volume {
 	unsigned volume;
 };
 
+/*Format issued, FIX INCLUDED */
 #define PLAYBACK_NUM_PERIODS		4
 #define PLAYBACK_MAX_PERIOD_SIZE	2048
 #define PLAYBACK_MIN_PERIOD_SIZE	512
